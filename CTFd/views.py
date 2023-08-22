@@ -197,7 +197,7 @@ def setup():
             page = Pages(title=None, route="index", content="", draft=False)
 
             # Upload banner
-            default_ctf_banner_location = url_for("views.themes", path="img/logo.png")
+            default_ctf_banner_location = url_for("views.themes", path="img/48617114.png")
             ctf_banner = request.files.get("ctf_banner")
             if ctf_banner:
                 f = upload_file(file=ctf_banner, page_id=page.id)
@@ -208,16 +208,14 @@ def setup():
     <div class="col-md-6 offset-md-3">
         <img class="w-100 mx-auto d-block" style="max-width: 500px;padding: 50px;padding-top: 14vh;" src="{default_ctf_banner_location}" />
         <h3 class="text-center">
-            <p>A cool CTF platform from <a href="https://ctfd.io">ctfd.io</a></p>
+            <p>Welcome to Praktikum Jaringan Komputer Tahun Akademik 2023/2024</p>
+
             <p>Follow us on social media:</p>
-            <a href="https://twitter.com/ctfdio"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>&nbsp;
-            <a href="https://facebook.com/ctfdio"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>&nbsp;
-            <a href="https://github.com/ctfd"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/ajklab_its"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i></a>&nbsp;
+            <a href="https://www.linkedin.com/company/ajk-its/"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>&nbsp;
+            <a href="https://github.com/arsitektur-jaringan-komputer"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
         </h3>
         <br>
-        <h4 class="text-center">
-            <a href="admin">Click here</a> to login and setup your CTF
-        </h4>
     </div>
 </div>"""
             page.content = index
